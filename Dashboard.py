@@ -95,7 +95,7 @@ def pie_chart_city(city):
     df = pd.DataFrame.from_dict(result,orient='index')
     df = df.reset_index()
     df.columns = ['category','number of articles']
-    fig = px.pie(df, values='number of articles', names='category', title='Articles Categories in '++city)
+    fig = px.pie(df, values='number of articles', names='category', title='Articles Categories in '+city)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     st.plotly_chart(fig)
     
