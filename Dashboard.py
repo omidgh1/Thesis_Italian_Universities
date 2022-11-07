@@ -20,45 +20,10 @@ import os
 # In[2]:
 
 
-@st.cache(suppress_st_warning=True)
+
 def reading_files(file,sep=','):
-    df = pd.read_csv('C:/Users/omidg/Downloads/Datasets/'+file,sep)
+    df = pd.read_csv(file,sep) #'C:/Users/omidg/Downloads/Datasets/'+
     return df
-
-
-# In[59]:
-
-
-#abstract_cities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/abstract_cities_30.csv')
-#abstract_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/abstract_total_30.csv')
-#abstract_universities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/abstract_universities_30.csv')
-    
-#Akeywords_cities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Akeywords_cities_30.csv')
-#Akeywords_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Akeywords_total_30.csv')
-#Akeywords_universities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Akeywords_universities_30.csv')
-    
-#Ikeywords_cities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Ikeywords_cities_30.csv')
-#Ikeywords_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Ikeywords_total_30.csv')
-#Ikeywords_universities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Ikeywords_universities_30.csv')
-    
-#italy_unis = pd.read_csv('C:/Users/omidg/Downloads/Datasets/Italy_universities_Scopus.csv')
-#eter = pd.read_csv('C:/Users/omidg/Downloads/Datasets/selected_eter.csv')
-
-#keywords_out_city = pd.read_csv('C:/Users/omidg/Downloads/Datasets/keywords_out_city.csv',sep=';')
-#keywords_out_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/keywords_out_total.csv',sep=';')
-#keywords_out_unis = pd.read_csv('C:/Users/omidg/Downloads/Datasets/keywords_out_unis.csv',sep=';')
-    
-#source_cities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/source_cities.csv')
-#source_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/source_total.csv')
-#source_universities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/source_universities.csv')
-    
-#title_cities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/title_cities_30.csv')
-#title_total = pd.read_csv('C:/Users/omidg/Downloads/Datasets/title_total_30.csv')
-#title_universities = pd.read_csv('C:/Users/omidg/Downloads/Datasets/title_universities_30.csv')
-
-
-# In[3]:
-
 
 abstract_cities = reading_files('abstract_cities_30.csv',sep = ';')
 abstract_total = reading_files('abstract_total_30.csv',sep = ';')
@@ -861,22 +826,4 @@ elif main_option == 'Text mining':
                 Important_Ikeywords_keywords_pos_total()
     
 
-
-# In[90]:
-
-
-#Important_index_keywords_out_total = pd.read_csv('Datasets/keywords_authors_out_total.csv')
-#italy_unis = pd.read_csv('Datasets/Italy_universities_Scopus.csv')
-
-
-# In[91]:
-
-
-#Important_index_keywords_out_total()
-
-
-# In[61]:
-
-
-#italy_unis.loc[0,'University']
 
